@@ -99,5 +99,39 @@ function updateSalary<T extends IEmployee>(employee:T, newSalary:number):T{
     return updatedSalaryObject;
 }
 
-const emp2 : IEmployee = updateSalary(emp1,98000);
+
+console.log("Updating Employee Salary");
+const emp2: IEmployee = updateSalary(emp1, 98000);
 console.log(emp2);
+console.log('-----------------------------------------------');
+
+console.log("Creating a Department and Listing Employees");
+const department = new Department();
+department.listEmployee();
+console.log('-----------------------------------------------');
+
+console.log("Adding an Employee to the Department");
+department.addEmployee(emp1);
+department.listEmployee();
+console.log('-----------------------------------------------');
+
+console.log("Removing an Employee from the Department");
+department.removeEmployee(3);
+department.listEmployee();
+console.log('-----------------------------------------------');
+
+console.log("Calculating Total Salary of the Department");
+console.log("Total Salary:", department.getTotalSalary());
+console.log('-----------------------------------------------');
+
+console.log("Using Generic Storage to Store Employees");
+const storage = new GenericStorage<IEmployee>();
+storage.add(emp1);
+storage.add(manager1);
+console.log(storage.getAll());
+console.log('-----------------------------------------------');
+
+console.log("Removing an Employee from Generic Storage");
+storage.remove(emp1);
+console.log(storage.getAll());
+console.log('-----------------------------------------------');
