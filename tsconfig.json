@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                  
+    "module": "ESNext",                
+    "outDir": "./dist",                
+    "rootDir": "./QuizApp",                
+    "strict": true,                     
+    "moduleResolution": "node",         
+    "esModuleInterop": true,            
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["QuizApp"],                   
+  "exclude": ["node_modules", "dist"] 
+}
